@@ -1,0 +1,175 @@
+/* .aboutContainer {
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.aboutContent {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #ffffff;
+}
+
+.aboutMaxWidth {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.aboutsSectionAboutIntro {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.aboutsSectionAboutIntro h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.aboutsSectionAboutIntro h1 span {
+  color: #3b82f6;
+}
+
+.aboutsSectionAboutIntro p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #4b5563;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutGridAboutVision {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .aboutGridAboutVision {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+}
+
+.aboutVisionText h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.aboutVisionText p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.aboutValues {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.aboutValues h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.aboutValuesGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .aboutValuesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.aboutValueCard {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.aboutValueIcon {
+  margin-bottom: 1rem;
+  color: #3b82f6;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.aboutTeam {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.aboutTeam h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.aboutTeamGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .aboutTeamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.aboutTeamMember {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutTeamImage img {
+  width: 120px;
+  height: 120px;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.aboutteamInfo h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.aboutTeamRole {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.aboutTeamBio {
+  font-size: 0.875rem;
+  color: #4b5563;
+  text-align: center;
+}
+ */

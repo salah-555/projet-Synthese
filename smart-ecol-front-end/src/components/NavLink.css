@@ -1,0 +1,39 @@
+.navlink {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Variants */
+.navlink.default {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navlink.default:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navlink.primary {
+  background-color: white;
+  color: #16a34a; /* remplacer par votre couleur ecosmart-600 */
+}
+
+.navlink.primary:hover {
+  background-color: #f0fdf4; /* ecosmart-50 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navlink.secondary {
+  background-color: #16a34a; /* ecosmart-600 */
+  color: white;
+}
+
+.navlink.secondary:hover {
+  background-color: #15803d; /* ecosmart-700 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

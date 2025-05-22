@@ -1,0 +1,172 @@
+/* Main container */
+.login-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+ 
+}
+
+.login-wrapper {
+  padding: 96px 16px 48px;
+}
+
+/* Card styling */
+.login-card {
+  max-width: 28rem;
+  margin: 0 auto;
+  width: 720px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* Header section */
+.login-header {
+  background-color: #059669;
+  padding: 24px;
+  color: white;
+  text-align: center;
+}
+
+.login-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.login-header p {
+  color: #e0e7ff;
+  font-size: 0.875rem;
+}
+
+/* Form styling */
+.login-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+}
+
+.form-input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+/* Form options */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.remember-me input {
+  width: 16px;
+  height: 16px;
+}
+
+.forgot-password {
+  color: #059669;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  color: #20854d;
+
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  background-color: #059669;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #20854d;
+}
+
+.login-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.arrow-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* Register link */
+.register-link {
+  text-align: center;
+  margin-top: 16px;
+  color: #6b7280;
+}
+
+.register-link-text {
+  color: #059669;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.register-link-text:hover {
+  text-decoration: underline;
+}
+
+/* Error message */
+.login-error {
+  color: #ef4444;
+  background-color: #fef2f2;
+  padding: 12px;
+  margin: 0 24px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.875rem;
+}
