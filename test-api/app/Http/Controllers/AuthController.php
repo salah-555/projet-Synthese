@@ -74,6 +74,9 @@ class AuthController extends Controller
       // Infos utilisateur connecté
     public function me(Request $request)
     {
-        return response()->json($request->user());
+       return response()->json([
+        'user' => $request->user(),
+        'role' => $request->user()->role, // Assure-toi que ça retourne bien le rôle
+    ]);
     }
 }

@@ -25,7 +25,13 @@ class User extends Authenticatable
         'email',
         'role',
         'password',
+        'classe_id', // Ajout de la relation avec la classe
     ];
+
+    // public function classes()
+    // {
+    //     return $this->belongsToMany(Classe::class, 'classe_user', 'user_id', 'classe_id');
+    // }
 
     /**
      * The attributes that should be hidden for serialization.

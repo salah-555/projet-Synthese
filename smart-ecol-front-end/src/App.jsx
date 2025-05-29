@@ -9,6 +9,9 @@ import ProfDasboard from './pages/ProfDashboard';
 import EleveDash from './pages/EleveDash';
 import './App.css'
 import ClassesPage from './pages/Admin/GestionClasses/ClassesPage';
+import MatierePage from './pages/Admin/gestionMatieres/MatierePage';
+
+
 
 
 function App() {
@@ -22,13 +25,12 @@ function App() {
       {/* Pour dashboard admin */}
         <Route path="/admin/dashboard" element = {<AdminDasboard />} />
         <Route path="/admin/classes" element = {<ClassesPage />} />
+        <Route path="/admin/matieres" element = {<MatierePage />} />
+     
 
 
-
-
-        <Route path="/prof/dashboard" element ={<ProfDasboard />} />
-        <Route path="/eleve/dashboard" element ={<EleveDash />} />
-      </Routes>
+      
+    </Routes>
     </Router>
   )
  

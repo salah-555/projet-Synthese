@@ -1,0 +1,43 @@
+
+
+
+POST http://localhost:8000/api/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Aouad mohammed",
+  "lastname": "Aouad mohammed",
+  "email": "Aouad@example.com",
+  "password": "password123",
+  "password_confirmation": "password123",
+  "role": "admin"
+}
+
+
+### Get all users
+GET http://localhost:8000/api/matieres
+Accept: application/json
+Content-Type: application/
+Authorization: Bearer  4|iZ7IBMuXyz57JgZ8xKbDTyYpyZrfYDquJOV469xpa6db765a
+
+
+
+
+
+
+
+
+
+
+
+### Login a user
+POST http://localhost:8000/api/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "Aouad@example.com",
+  "password": "password123"
+}
+

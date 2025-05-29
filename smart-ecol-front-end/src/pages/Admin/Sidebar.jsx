@@ -19,7 +19,7 @@ const Sidebar = () => {
                             <NavLink to="/admin/matieres">Matières</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/admin/professeurs">Professeurs</NavLink>
+                            <NavLink to="/admin/emploi">Gestion d'emploi du temps</NavLink>
                         </li>
                         <li>
                             <NavLink to="/admin/eleve">Élèves</NavLink>
