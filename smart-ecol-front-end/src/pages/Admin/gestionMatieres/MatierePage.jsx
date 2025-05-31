@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Pencil, Trash2, Plus, X, Check, AlertCircle } from 'lucide-react';
+import { Pencil, Trash2, Plus, X, Check, AlertCircle, ArrowRight} from 'lucide-react';
 import styles from './matiere.module.css';
+import Navbar from '../../../components/Navbar';
+import SidebarComponent from '../SidebarComponent';
+import { useNavigate } from 'react-router-dom';
 
 const MatiereManagement = () => {
   const [matieres, setMatieres] = useState([]);
@@ -10,24 +13,43 @@ const MatiereManagement = () => {
   const [formData, setFormData] = useState({ name: '' });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [authToken, setAuthToken] = useState('demo-token-123'); // In-memory token storage
-
+  // const [authToken, setAuthToken] = useState('demo-token-123'); // In-memory token storage
+  const [authToken, setAuthToken] = useState('');
+ 
   // Simulated API base URL - replace with your actual API endpoint
+useEffect(() => {
+  const token = localStorage.getItem('token');
+  console.log('Token récupéré depuis localStorage :', token);
+  if (token) {
+    setAuthToken(token);
+    fetchMatieres(token);
+  } else {
+    setError("Aucun token trouvé. Veuillez vous reconnecter.");
+  }
+}, []);
+
   
 
   // Fetch all matieres
-  const fetchMatieres = async () => {
+  const fetchMatieres = async (token) => {
     try {
       setLoading(true);
+      setError(null);
       const response = await fetch('http://localhost:8000/api/matieres', {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${authToken}`,
-          'Content-Type': 'application/json'
-        }
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+
       });
       
-      if (!response.ok) throw new Error('Failed to fetch matieres');
+      if(!response.ok) {
+        const errorData = await response.json();
+        console.error('Full API response :', errorData);
+        throw new Error(errorData.message || 'Failed to fetch matieres');
+      }
       
       const data = await response.json();
       setMatieres(data);
@@ -167,6 +189,7 @@ const MatiereManagement = () => {
 
   useEffect(() => {
     fetchMatieres();
+
   }, []);
 
   useEffect(() => {
@@ -176,7 +199,18 @@ const MatiereManagement = () => {
     }
   }, [error, success]);
 
+
+
+
+  const navigate = useNavigate();
+  const goToDashboard = () => {
+    navigate("/admin/dashboard");
+  }
+
   return (
+    <div className={styles.navigation}>
+    <Navbar />
+    <SidebarComponent />
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.title}>Gestion des Matières</h2>
@@ -187,7 +221,15 @@ const MatiereManagement = () => {
           <Plus size={20} />
           Ajouter une matière
         </button>
+        <button
+        onClick={() => {goToDashboard()}}
+        className={styles.addButton}
+      >
+        <ArrowRight size={20} />
+        Retour
+      </button>
       </div>
+      
 
       {/* Messages */}
       {error && (
@@ -350,7 +392,8 @@ const MatiereManagement = () => {
         </div>
       </div>
     </div>
-  );
+ </div>
+     );
 };
 
 export default MatiereManagement;

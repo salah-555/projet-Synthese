@@ -2,6 +2,7 @@
 .register-page {
   display: flex;
   margin-top: 50px;
+  margin-left: 30vw;
   justify-content: space-between;
   background-color: #059669;
   min-height: 99vh;

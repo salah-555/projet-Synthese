@@ -12,7 +12,7 @@ use App\Http\Controllers\MatiereController;
 // acceder  pour tout le mondes 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::get('/matieres', [MatiereController::class, 'index']);
+// Route::get('/matieres', [MatiereController::class, 'index']);
 
 
  Route::apiResource('/matieres', MatiereController::class)
@@ -33,7 +33,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
 
     //pour les matieres 
-    // Route::get('/matieres', [MatiereController::class, 'index']);
+    Route::get('/matieres', [MatiereController::class, 'index']);
     Route::get('/matieres/{matiere}', [MatiereController::class, 'show']);
 
     
@@ -45,9 +45,10 @@ Route::middleware('auth:sanctum')->group(function () {
     // Route pour les admins uniquement 
     Route::middleware('role:admin')->group(function (){
 
-       
+        //  Route::apiResource('/matieres', MatiereController::class)
+        //     ->only(['store', 'update', 'destroy']);
 
-
+    
         // pour les profs - CORRIGEZ CETTE LIGNE
         Route::get('/users', function (Request $request) {
             if ($request->has('role')) {

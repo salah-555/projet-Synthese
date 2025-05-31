@@ -28,9 +28,10 @@ html, body {
 }
 
 .sidebar {
-  width: var(--sidebar-width);
+  width: auto;
+  height: auto;
   background-color: white;
-  padding: 20px;
+  padding: auto;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: var(--navbar-height);
@@ -42,6 +43,7 @@ html, body {
   height: 100vh;
   overflow-y: auto;
   margin-left: 0px;
+  
 }
 
 .sidebar-title {
@@ -78,7 +80,7 @@ html, body {
 
 .dashboard-container {
   margin-top: var(--navbar-height);
-  margin-left: var(--sidebar-width);
+  margin-left: 450px;
   flex: 1;
   display: flex;
   padding: 30px;
@@ -90,7 +92,8 @@ html, body {
 
 
 .dashboard-title {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 3rem;
   margin-bottom: 30px;
   color: var(--primary-color);
 }

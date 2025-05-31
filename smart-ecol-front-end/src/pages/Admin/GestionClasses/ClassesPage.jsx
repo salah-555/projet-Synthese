@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Trash2, Plus, UserPlus, X, Users, Sidebar} from 'lucide-react';
+import { Trash2, Plus, UserPlus, X, Users,ArrowRight} from 'lucide-react';
 import styles from './classe.module.css';
 import Navbar from '../../../components/Navbar';
+import SidebarComponent from '../SidebarComponent.jsx';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -203,21 +205,6 @@ const ClassesPage = () => {
     }
   };
 
-//   const openAssignStudentsModal = async (classe) => {
-//   setSelectedClasse(classe);
-//   setShowAssignStudentsModal(true);
-
-//   try {
-//     const response = await fetch(`http://localhost:8000/api/classes/unassigned`, {
-//       headers: getAuthHeaders()
-//     });
-//     const data = await response.json();
-//     setUnassignedStudents(data);
-//   } catch (err) {
-//     setError("Impossible de charger les élèves non assignés", err.message);
-//   }
-// };
-
 const openAssignStudentsModal = async (classe) => {
   // 1. On sauvegarde la classe sélectionnée dans l’état React
   setSelectedClasse(classe);
@@ -236,11 +223,16 @@ const openAssignStudentsModal = async (classe) => {
     setUnassignedStudents(data);
   } catch (err) {
     // 5. Si erreur, afficher un message d’erreur
-    setError("Impossible de charger les élèves non assignés");
+    setError("Impossible de charger les élèves non assignés", err);
   }
 };
 
-  
+const navigate = useNavigate();
+// Redirection ver la page dashboard 
+const goToDashboard = () => {
+  navigate('/admin/dashboard');
+};
+
 
   // Ajoutez ce useEffect pour debugger
     useEffect(() => {
@@ -248,12 +240,6 @@ const openAssignStudentsModal = async (classe) => {
         console.log('Unassigned students loaded:', unassignedStudents);
       }
     }, [unassignedStudents]);
-
-  
-
- 
-
-
 
   useEffect(() => {
     const loadData = async () => {
@@ -282,9 +268,9 @@ const openAssignStudentsModal = async (classe) => {
     
     <div className={styles.pageContainer}>
         <Navbar />
-      <div className={styles.contentWrapper}>
-        {/* Header */}
+        <SidebarComponent />
         
+      <div className={styles.contentWrapper}> 
         <div className={styles.headerCard}>
           <div className={styles.headerContent}>
             <div className={styles.headerInfo}>
@@ -298,6 +284,14 @@ const openAssignStudentsModal = async (classe) => {
               >
                 <Plus size={20} />
                 Ajouter une classe
+              </button>
+
+              <button
+                onClick={() => {goToDashboard()}}
+                className={styles.addButton}
+              >
+                <ArrowRight size={20} />
+                Retour
               </button>
             </div>
           </div>

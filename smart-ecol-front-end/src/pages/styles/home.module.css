@@ -1,0 +1,53 @@
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb; /* bg-gray-50 */
+}
+
+.contentWrapper {
+  padding-top: 6rem;  /* pt-24 */
+  padding-bottom: 3rem; /* pb-12 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.contentContainer {
+  margin-top: 20vh;
+  max-width: 80rem; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroSection {
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold;
+  color: #111827; /* text-gray-900 */
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3rem; /* md:text-5xl */
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 3.75rem; /* lg:text-6xl */
+  }
+}
+
+.highlight {
+  color: #059669; /* Replace with your "ecosmart-600" color */
+}
+
+.heroSubtitle {
+  font-size: 1.25rem; /* text-xl */
+  color: #4B5563; /* text-gray-600 */
+  max-width: 48rem; /* max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+}

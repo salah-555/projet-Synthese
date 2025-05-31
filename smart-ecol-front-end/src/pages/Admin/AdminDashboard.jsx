@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Sidebar from './Sidebar';
+import SidebarComponent from './SidebarComponent';
 import InfoCard from './InfoCard';
 import './css/dashboard.css';
 import Navbar from '../../components/Navbar';
@@ -65,15 +65,16 @@ const AdminDasboard = () => {
   return (
     <div className="div-dashboard">
     <Navbar />
+    <SidebarComponent />
       <div className="dashboard-container">
-        <Sidebar />
+        
         <main className="dashboard-content">
           <h1 className="dashboard-title">Tableau de Bord - Admin</h1>
           <div className="card-grid">
-            <InfoCard title="Classes" count={stats.classes} color="#4CAF50" onClick= {() => handleCardClick('/classes')} />
-            <InfoCard title="Matieres" count={stats.matieres} color="#2196F3" onClick= {() => handleCardClick('/matieres')}/>
-            <InfoCard title="Professeurs" count={stats.professeurs} color="#FF9800" onClick= {() => handleCardClick('/professeurs')} />
-            <InfoCard title="Élèves" count={stats.eleves} color="#9C27B0" onClick = {() => handleCardClick('/eleves')} />
+            <InfoCard title="Classes" count={11} color="#4CAF50" onClick= {() => handleCardClick('/classes')} />
+            <InfoCard title="Matieres" count={5} color="#2196F3" onClick= {() => handleCardClick('/matieres')}/>
+            <InfoCard title="Professeurs" count={10} color="#FF9800" onClick= {() => handleCardClick('/professeurs')} />
+            <InfoCard title="Élèves" count={100} color="#9C27B0" onClick = {() => handleCardClick('/eleves')} />
           </div>
         </main>
     </div>

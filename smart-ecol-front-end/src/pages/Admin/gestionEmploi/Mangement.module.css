@@ -1,0 +1,106 @@
+.timeManagementContainer {
+  margin-top: 20vh;
+  margin-left: 20vw;
+  max-width: 70vw;
+  background-color: #f9f9f9;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboardTitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e7d32; /* dark green */
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.selectInput,
+.timeInput {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.selectInput:focus,
+.timeInput:focus {
+  outline: none;
+  border-color: #4caf50; /* green */
+}
+
+.btnPrimary {
+  background-color: #4caf50; /* green */
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background-color: #388e3c;
+}
+
+.btnPrimary:disabled,
+.btnPrimary[aria-disabled='true'] {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: #d32f2f;
+  background-color: #fbe9e7;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sessionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sessionsTable th,
+.sessionsTable td {
+  padding: 12px 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.sessionsTable th {
+  background-color: #eeeeee;
+  font-weight: bold;
+  color: #555;
+}
+
+.sessionsTable tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+.noData {
+  text-align: center;
+  padding: 16px;
+  color: #999;
+  font-style: italic;
+}

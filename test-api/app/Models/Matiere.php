@@ -18,7 +18,7 @@ class Matiere extends Model
      // Relation avec les élèves (many-to-many)
     public function eleves(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'eleve_matiere', 'matiere_id', 'user_id')
+        return $this->belongsToMany(User::class, 'eleve_matieres', 'matiere_id', 'user_id')
                     ->where('role', 'eleve');
     }
 

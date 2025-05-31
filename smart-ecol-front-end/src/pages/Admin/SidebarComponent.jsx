@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import './css/dashboard.css';
 
 
-const Sidebar = () => {
+const SidebarComponent = () => {
     return (
         <aside className="sidebar">
             <h2 className="sidebar-title">SmartEco</h2>
@@ -21,13 +21,11 @@ const Sidebar = () => {
                         <li>
                             <NavLink to="/admin/emploi">Gestion d'emploi du temps</NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/admin/eleve">Élèves</NavLink>
-                        </li>   
+                       
                 </ul>
             </nav>
         </aside>
     );
 };
 
-export default Sidebar;
+export default SidebarComponent;
